@@ -106,7 +106,7 @@ func NewRecorder() (*Recorder, error) {
 			Description: prCount.Description(),
 			Measure:     prCount,
 			Aggregation: view.Count(),
-			TagKeys:     []tag.Key{r.status},
+			TagKeys:     []tag.Key{r.status, r.namespace},
 		},
 		&view.View{
 			Description: runningPRsCount.Description(),

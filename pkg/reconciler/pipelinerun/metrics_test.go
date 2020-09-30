@@ -83,7 +83,8 @@ func TestRecordPipelineRunDurationCount(t *testing.T) {
 			"status":      "success",
 		},
 		expectedCountTags: map[string]string{
-			"status": "success",
+			"status":    "success",
+			"namespace": "ns",
 		},
 		expectedDuration: 60,
 		expectedCount:    1,
@@ -114,7 +115,8 @@ func TestRecordPipelineRunDurationCount(t *testing.T) {
 			"status":      "failed",
 		},
 		expectedCountTags: map[string]string{
-			"status": "failed",
+			"status":    "failed",
+			"namespace": "ns",
 		},
 		expectedDuration: 60,
 		expectedCount:    1,
